@@ -39,3 +39,9 @@ jobs:
         with:
           sarif_file: results.sarif
         if: always()
+
+        
+      - name: Upload CodeQL Analysis
+        uses: actions/upload-artifact@v4
+        with:
+          path: results.sarif
